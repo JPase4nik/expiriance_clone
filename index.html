@@ -3,10 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Triangle Drawing</title>
 </head>
 <body>
+    <form action="" id="form">
+        <label for="height">Висота трикутника:</label>
+        <input name="height" type="number" id="height" value="5" min="1"><br><br>
     
-    <script src="./howoldareyou.js"></script>
+        <label for="symbol">Символ для малювання:</label>
+        <input  name="symbol"  type="text" id="symbol" value="+"><br><br>
+    
+        <label for="direction">Напрямок трикутника:</label>
+        <select id="direction" name="direction">
+            <option value="increasing">Зростаючий</option>
+            <option value="decreasing">Зменшуючий</option>
+        </select><br><br>
+    
+        <label for="both">Показати обидва:</label>
+        <input name="both" type="checkbox" id="both" >
+        <br><br>
+    
+        <button type="submit" id="submit">Малювати трикутники</button>
+        <button type="reset" id="reset">Reset</button>
+    </form>
+    <div id="output"></div>
+    <script src="./printTriangle.js"></script>
 </body>
 </html>
