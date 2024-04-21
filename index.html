@@ -3,30 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Triangle Drawing</title>
+    <title>Exponentiation</title>
 </head>
 <body>
     <form action="" id="form">
-        <label for="height">Висота трикутника:</label>
-        <input name="height" type="number" id="height" value="5" min="1"><br><br>
+        <label for="basis">Basis:</label>
+        <input name="basis" type="number" step="1" id="basis"><br><br>
     
-        <label for="symbol">Символ для малювання:</label>
-        <input  name="symbol"  type="text" id="symbol" value="+"><br><br>
+        <label for="degree">Degree:</label>
+        <input  name="degree"  type="number" id="degree"><br><br>
     
-        <label for="direction">Напрямок трикутника:</label>
-        <select id="direction" name="direction">
-            <option value="increasing">Зростаючий</option>
-            <option value="decreasing">Зменшуючий</option>
-        </select><br><br>
-    
-        <label for="both">Показати обидва:</label>
-        <input name="both" type="checkbox" id="both" >
-        <br><br>
-    
-        <button type="submit" id="submit">Малювати трикутники</button>
-        <button type="reset" id="reset">Reset</button>
+        <button type="submit" id="submit">Bring to the step</button>
     </form>
-    <div id="output"></div>
-    <script src="./printTriangle.js"></script>
+    <h2 id="output"></div>
+    <script src="./exponentiation.js"></script>
 </body>
 </html>
