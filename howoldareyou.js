@@ -16,11 +16,10 @@ if (isNaN(age) && age < 0) {
         ageMessage = 'роки';
     }
 
-    console.log(`${age} ${ageMessage}`);
-}
+    let resultMessage = `${age} ${ageMessage}`;
+    console.log(resultMessage); 
+    document.body.innerHTML += `<p>${resultMessage}</p>`; 
+} 
 
 
 
-console.log(isNaN('one')); // true
-console.log(isNaN('1')); // false
-console.log(isNaN(1)); // false
