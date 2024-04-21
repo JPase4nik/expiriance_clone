@@ -1,24 +1,26 @@
-let age = prompt("How old are you?")
-let ageMessage = 'років'; 
+let ageStr = prompt("How old are you?");
+let age = parseInt(ageStr);
 
-if (age < 0 || isNaN(age)|| !Number.isInteger(Number(age))) {
-    alert( "The age is invalid");
-    
+if (isNaN(age) && age < 0) {
+    alert("The age is invalid");
 } else {
- 
-    if (age[age.length - 1] === '1'  && !(age.length > 1 && age[age.length - 2] === '1')) {
-        ageMessage = 'рік'
-    } 
-    if (age[age.length - 1] === '2' || age[age.length - 1] === '3' || age[age.length - 1] === '4') {
-        ageMessage = 'роки'
+    let lastDigit = age % 10;
+    let lastTwoDigits = age % 100;
+    let ageMessage = 'років';
+
+    if (lastTwoDigits >= 11 && lastTwoDigits <= 14) {
+        ageMessage = 'років';
+    } else if (lastDigit === 1) {
+        ageMessage = 'рік';
+    } else if (lastDigit === 2 || lastDigit === 3 || lastDigit === 4) {
+        ageMessage = 'роки';
     }
-    console.log(age + ' ' + ageMessage);
+
+    console.log(`${age} ${ageMessage}`);
 }
-let resultMessage = `${age} ${ageMessage}`
 
 
 
-
-
-
-
+console.log(isNaN('one')); // true
+console.log(isNaN('1')); // false
+console.log(isNaN(1)); // false
