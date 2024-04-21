@@ -1,7 +1,7 @@
 let ageStr = prompt("How old are you?");
 let age = parseInt(ageStr);
 
-if (isNaN(age) && age < 0) {
+if (isNaN(age) || age < 0) {
     alert("The age is invalid");
 } else {
     let lastDigit = age % 10;
