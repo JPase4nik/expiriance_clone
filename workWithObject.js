@@ -6,12 +6,12 @@ const Car = {
     getInfo: function () {
         let info = "";
         for (let key in this) {
-            if (typeof this[key] !== 'function') {
+            if (typeof this[key] !== 'function') {  // check each property and if this property isn't the function - display it
                 info += `${key}: ${this[key]}, `;
             }
         }
         return info;
    }
 };
-Car.type = "jeep"
+Car.type = "jeep"  // add new property
 console.log(Car.getInfo());
