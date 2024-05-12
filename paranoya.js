@@ -16,7 +16,7 @@ const infos = [
     },
 ];
 
-const pattern = /@(gmail|yahoo)\.com/g; // створюємо регулярний вираз
+const pattern = /^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)?@(gmail|yahoo)\.com/g; // створюємо регулярний вираз
 
 const result = []
 for (const info of infos) {  // перебираєм масив об'єктів
